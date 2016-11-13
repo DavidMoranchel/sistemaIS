@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Panel</title>
+	<!-- Behavioral Meta Data -->
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<!-- Compiled and minified CSS -->
+  	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/css/materialize.min.css">
+	<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+	<link rel="stylesheet" href="css/registro.css">
+
+	<script
+	  src="https://code.jquery.com/jquery-2.2.4.min.js"
+	  integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+	  crossorigin="anonymous"></script>
+	<!-- Compiled and minified JavaScript -->
+ 	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/js/materialize.min.js"></script>
+ 	<script src="https://www.gstatic.com/firebasejs/3.5.3/firebase.js"></script>
+	<script src="js/main.js"></script>
+	<script src="js/registro.js"></script>
+</head>
+<body>
+	<div class="section z-depth-2 blue darken-3">
+		<div class="row container">
+			<h2 class="white-text">Tours</h2>
+			<h6 class="white-text">Aquí se encuentran todos los tours registrados</h6>
+ 			<a class="btn-floating btn-large waves-effect waves-light blue topB" href="/tours.html"><i class="material-icons">add</i></a>
+		</div>
+	</div>
+      <table class="striped">
+        <thead>
+          <tr>
+              <th data-field="firstName">Nombre</th>
+              <th data-field="lastName">Apellidos</th>
+              <th data-field="email">Correo</th>
+			  <th data-field="phone">Celular</th>
+              <th data-field="tour">Tour</th>
+              <th data-field="country">País</th>
+              <th data-field="city">Ciudad</th>
+              <th data-field="date">Fecha del tour</th>
+              <th data-field="price">Precio</th>
+              <th data-field="creditCard">Numero de Tarjeta</th>
+              <th data-field="secutiryCode">Codigo de seguridad</th>
+              <th data-field="expiration">Fecha de expiración</th>
+              <th data-field="code">Promoción</th>
+          </tr>
+        </thead>
+
+        <tbody id="toursData">
+        </tbody>
+      </table>
+      	<div class="section z-depth-2 blue darken-3 top">
+		<div class="row container">
+			<h2 class="white-text">Vuelos</h2>
+			<h6 class="white-text">Aquí se encuentran todos los vuelos registrados</h6>
+			<a class="btn-floating btn-large waves-effect waves-light blue topB" href="/vuelos.html"><i class="material-icons">add</i></a>
+		</div>
+	</div>
+<table class="striped">
+        <thead>
+          <tr>
+              <th data-field="firstName">Nombre</th>
+              <th data-field="lastName">Apellidos</th>
+              <th data-field="email">Correo</th>
+			  <th data-field="phone">Celular</th>
+              <th data-field="airline">Aereolinea</th>
+              <th data-field="date">Fecha de vuelo</th>
+              <th data-field="time">Hora de vuelo</th>
+              <th data-field="origin">Origen</th>
+              <th data-field="destination">Destino</th>
+              <th data-field="price">Precio</th>
+              <th data-field="creditCard">Numero de Tarjeta</th>
+              <th data-field="secutiryCode">Codigo de seguridad</th>
+              <th data-field="expiration">Fecha de expiración</th>
+              <th data-field="code">Promoción</th>
+          </tr>
+        </thead>
+
+        <tbody id="vuelosData">
+        </tbody>
+      </table>
+   	<div class="section z-depth-2 blue darken-3 top">
+		<div class="row container">
+			<h2 class="white-text">Hoteles</h2>
+			<h6 class="white-text">Aquí se encuentran todos los hoteles registrados</h6>
+			<a class="btn-floating btn-large waves-effect waves-light blue topB" href="/hoteles.html"><i class="material-icons">add</i></a>
+		</div>
+	</div>
+      <table class="striped">
+        <thead>
+          <tr>
+              <th data-field="firstName">Nombre</th>
+              <th data-field="lastName">Apellidos</th>
+              <th data-field="email">Correo</th>
+			  <th data-field="phone">Celular</th>
+              <th data-field="hotel">Hotel</th>
+              <th data-field="stars">Estrellas</th>
+              <th data-field="bed">Camas</th>
+              <th data-field="country">País</th>
+              <th data-field="city">Ciudad</th>
+              <th data-field="stay">Estancia</th>
+              <th data-field="date">Fecha</th>
+              <th data-field="price">Precio</th>
+              <th data-field="creditCard">Numero de Tarjeta</th>
+              <th data-field="secutiryCode">Codigo de seguridad</th>
+              <th data-field="expiration">Fecha de expiración</th>
+              <th data-field="code">Promoción</th>
+          </tr>
+        </thead>
+
+        <tbody id="hotelesData">
+        </tbody>
+      </table>
+    <div class="section z-depth-2 blue darken-3 top">
+		<div class="row container">
+			<h2 class="white-text">Paquetes</h2>
+			<h6 class="white-text">Aquí se encuentran todos los paquetes registrados</h6>
+			<a class="btn-floating btn-large waves-effect waves-light blue topB" href="/paquetes.html"><i class="material-icons">add</i></a>
+		</div>
+	</div>
+      <table class="striped">
+        <thead>
+          <tr>
+              <th data-field="firstName">Nombre</th>
+              <th data-field="lastName">Apellidos</th>
+              <th data-field="email">Correo</th>
+			  <th data-field="airline">Aerolinea</th>
+			  <th data-field="date">Fecha</th>
+			  <th data-field="time">Hora</th>
+			  <th data-field="origin">Origen</th>
+              <th data-field="destination">Destino</th>
+              <th data-field="hotel">Hotel</th>
+              <th data-field="stars">Estrellas</th>
+              <th data-field="bed">Camas</th>
+              <th data-field="tours">Precio</th>
+              <th data-field="tours">Tours</th>
+              <th data-field="creditCard">Numero de Tarjeta</th>
+              <th data-field="secutiryCode">Codigo de seguridad</th>
+              <th data-field="expiration">Fecha de expiración</th>
+              <th data-field="code">Promoción</th>
+          </tr>
+        </thead>
+
+        <tbody id="paquetesData">
+        </tbody>
+      </table>
+</body>
+</html>

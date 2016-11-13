@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Tours</title>
+	<!-- Behavioral Meta Data -->
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<!-- Styles -->
+	<!-- Compiled and minified CSS -->
+  	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/css/materialize.min.css">
+	<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+	<link rel="stylesheet" href="css/registro.css">
+
+	<script
+	  src="https://code.jquery.com/jquery-2.2.4.min.js"
+	  integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+	  crossorigin="anonymous"></script>
+	<!-- Compiled and minified JavaScript -->
+ 	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/js/materialize.min.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/3.5.3/firebase.js"></script>
+	<script src="js/main.js"></script>
+	<script defer src="js/registro.js"></script>
+</head>
+<body>
+	<div class="container centerContainer">
+	      <div class="col s12 m5">
+	        <div class="card-panel white hoverable radCard">
+	          <h4 class="card-title blue-text center-align">Registro de Tours</h4>
+	          <form id="form" name="registrationForm" method="post" action="/" onsubmit="registroTours()">
+		          <div class="row">
+				    <div class="input-field col s4 m2">
+				      <input required id="firstName" type="text" class="validate" pattern="[A-Za-zñÑáéíóúÁÉÍÓÚ\s ]+">
+				      <label class="active" for="firstName">Nombre(s) *</label>
+				    </div>
+				    <div class="input-field col s8 m4">
+				      <input required id="lastName" type="text" class="validate" pattern="[A-Za-zñÑáéíóúÁÉÍÓÚ\s ]+">
+				      <label class="active" for="lastName">Apellidos *</label>
+				    </div>
+				    <div class="input-field col s6 m3">
+				      <input required id="email" type="email" class="validate">
+				      <label class="active" for="email">Email *</label>
+				    </div>
+				    <div class="input-field col s6 m3">
+				      <input required id="phone" type="tel" class="validate" pattern="[0-9]{10}">
+				      <label class="active" for="phone">Telefono *</label>
+				    </div>
+					<div class="input-field col s6 m3">
+				      <input required id="tour" type="text" class="validate">
+				      <label class="active" for="tour">Tour *</label>
+				    </div>
+				    <div class="input-field col s6 m3">
+				      <input required id="country" type="text" class="validate">
+				      <label class="active" for="country">Pais *</label>
+				    </div>
+				    <div class="input-field col s6 m3">
+				      <input required id="city" type="text" class="validate">
+				      <label class="active" for="city">Ciudad *</label>
+				    </div>
+				    <div class="input-field col s6 m3">
+				      <input required id="price" type="text" class="validate">
+				      <label class="active" for="price">Costo(especificar moneda) *</label>
+				    </div>
+				    <div class="input-field col s6 m3">
+				      <input required id="date" type="date" class="datepicker">
+				      <label class="active" for="date">Fecha *</label>
+				    </div>
+					<div class="input-field col s6 m4">
+				      <input required id="creditCard" type="tel" class="validate" pattern="[0-9]{16}">
+				      <label class="active" for="creditCard">Tarjeta de Credito (16 digitos)*</label>
+				    </div>
+				    <div class="input-field col s6 m4">
+				      <input required id="secutiryCode" type="tel" class="validate" pattern="[0-9]{3}">
+				      <label class="active" for="secutiryCode">Codigo de seguridad *</label>
+				    </div>
+				    <div class="input-field col s6 m4">
+				      <input required id="expiration" type="tel" class="validate" pattern="[0-9]{4}">
+				      <label class="active" for="expiration">Fecha de expiracion (MMYY) *</label>
+				    </div>
+				    <div class="input-field col s6 m3">
+			          <input id="code" type="password" class="validate">
+			          <label for="code">Codigo promocional</label>
+			        </div>
+				    <button class="btn waves-effect waves-light blue" type="submit" name="action">Aplicar
+						<i class="material-icons right">send</i>
+					</button>
+        		</form>
+			  </div>
+	        </div>
+	      </div>
+	</div>
+	
+</body>
+</html>
